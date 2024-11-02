@@ -2,12 +2,13 @@
 const resources = [];
 
 // Function to create a new resource object based on input values
-function createResource(name, quantity, consumptionRate) {
+function createResource(name, quantity, consumptionRate, reorderThreshold) {
     return {
-        name: name,
-        quantity: quantity,
-        consumptionRate: consumptionRate,
-        depletionDate: calculateDepletionDate(quantity, consumptionRate)
+        name,
+        quantity,
+        consumptionRate,
+        reorderThreshold,
+        depletionDate: calculateDepletionDate(quantity, consumptionRate),
     };
 }
 
@@ -20,8 +21,8 @@ function calculateDepletionDate(quantity, consumptionRate) {
 }
 
 // Function to add the new resource to the resources array
-function addResource(name, quantity, consumptionRate) {
-    const resource = createResource(name, quantity, consumptionRate);
+function addResource(name, quantity, consumptionRate, reorderThreshold) {
+    const resource = createResource(name, quantity, consumptionRate, reorderThreshold);
     resources.push(resource);
     renderTable();  // Optionally, refresh the display
 }
