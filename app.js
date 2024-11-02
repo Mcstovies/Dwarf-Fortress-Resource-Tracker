@@ -28,3 +28,18 @@ function addResource(name, quantity, consumptionRate, reorderThreshold) {
     renderTable();  // Optionally, refresh the display
 }
 
+// Event listener for form submission
+document.getElementById('resource-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Capture input values
+    const name = document.getElementById('resource-name').ariaValueMax;
+    const quantity = parseInt(document.getElementById('resource-quantity').value)
+    const consumptionRate = parseInt(document.getElementById('resource-usage').value)
+    const reorderThreshold = parseInt(document.getElementById('reorder-threshold').value);
+
+       // Add the resource and clear the form
+       addResource(name, quantity, consumptionRate, reorderThreshold);
+       document.getElementById('resource-form').reset();
+}); 
+
