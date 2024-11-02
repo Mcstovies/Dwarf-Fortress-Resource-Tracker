@@ -27,6 +27,3 @@ function addResource(name, quantity, consumptionRate, reorderThreshold) {
     renderTable();  // Optionally, refresh the display
 }
 
-// Example usage
-addResource("Wood", 100, 5); // Adds "Wood" with quantity 100 and daily usage of 5 units
-addResource("Food", 50, 2);  // Adds "Food" with quantity 50 and daily usage of 2 units
