@@ -1,21 +1,39 @@
-<div id="dashboard">
-    <h1>Dwarf Fortress Resource Tracker</h1>
-    <form id="resource-form">
-        <!-- Form Inputs -->
-        <input type="text" id="resource-name" placeholder="Resource Name">
-        <input type="number" id="resource-quantity" placeholder="Quantity">
-        <input type="number" id="resource-usage" placeholder="Daily Usage Rate">
-        <input type="number" id="reorder-threshold" placeholder="Reorder Threshold">
-        <button type="submit">Add Resource</button>
-    </form>
-    <div id="resource-tables">
-        <table id="resource-table">
-            <thead>
-                <tr>
-                    <th>Item</th><th>Quantity</th><th>Usage Rate</th><th>Reorder Threshold</th><th>Alert</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dwarf Fortress Resource Tracker</title>
+</head>
+<body>
+    <div id="dashboard">
+        <h1>Dwarf Fortress Resource Tracker</h1>
+        <form id="resource-form">
+            <!-- Form Inputs -->
+            <input type="text" id="resource-name" placeholder="Resource Name" required>
+            <input type="number" id="resource-quantity" placeholder="Quantity" required>
+            <input type="number" id="resource-usage" placeholder="Daily Usage Rate" required>
+            <input type="number" id="reorder-threshold" placeholder="Reorder Threshold" required>
+            <button type="submit">Add Resource</button>
+        </form>
+        
+        <div id="resource-tables">
+            <table id="resource-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Usage Rate</th>
+                        <th>Reorder Threshold</th>
+                        <th>Alert</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
     </div>
-</div>
+
+    <!-- JavaScript file -->
+    <script src="app.js"></script>  
+</body>
+</html>
