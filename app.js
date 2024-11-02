@@ -20,13 +20,6 @@ function calculateDepletionDate(quantity, consumptionRate) {
     return depletionDate.toDateString();
 }
 
-// Calculate depletion date based on quantity and consumption rate
-function calculateDepletionDate(quantity, consumptionRate) {
-    const daysLeft = Math.floor(quantity / consumptionRate) ;
-    const depletionDate = new Date();
-    depletionDate.setDate(depletionDate.getDate() + daysLeft);
-    return depletionDate.toDateString();
-}
 
 // Function to add the new resource to the resources array
 function addResource(name, quantity, consumptionRate, reorderThreshold) {
