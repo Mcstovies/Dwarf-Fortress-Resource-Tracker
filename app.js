@@ -28,6 +28,29 @@ function addResource(name, quantity, consumptionRate, reorderThreshold) {
     renderTable();  // Optionally, refresh the display
 }
 
+// Function to render the table with the resources
+function renderTable() {
+    const tableBody = document.querySelector('#resource-table tbody');
+    
+        tableBody.innerHTML = ''; // Clear the table before re-rendering
+
+        // Loop through each resource and create a new row in the table
+        resources.forEach((resource) => {
+            const row = document.createElement('tr');
+
+            row.innerHTML = `
+            <td>${resource.name}</td>
+            <td>${resource.quantity}</td>
+            <td>${resource.consumptionRate}</td>
+            <td>${resource.reorderThreshold}</td>
+            <td>${resource.depletionDate}</td>
+            `;
+
+            // Append the row to the table body
+            tableBody.appendChild(row);
+        });
+    
+}
 // Event listener for form submission
 document.getElementById('resource-form').addEventListener('submit', function(event) {
     event.preventDefault();
