@@ -31,7 +31,7 @@ function addResource(name, quantity, consumptionRate, reorderThreshold) {
 // Function to render the table with the resources
 function renderTable() {
     const tableBody = document.querySelector('#resource-table tbody');
-    
+
         tableBody.innerHTML = ''; // Clear the table before re-rendering
 
         // Loop through each resource and create a new row in the table
@@ -56,7 +56,7 @@ document.getElementById('resource-form').addEventListener('submit', function(eve
     event.preventDefault();
 
     // Capture input values
-    const name = document.getElementById('resource-name').ariaValueMax;
+    const name = document.getElementById('resource-name').value;
     const quantity = parseInt(document.getElementById('resource-quantity').value)
     const consumptionRate = parseInt(document.getElementById('resource-usage').value)
     const reorderThreshold = parseInt(document.getElementById('reorder-threshold').value);
